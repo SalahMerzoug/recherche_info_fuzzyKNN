@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="760.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controles.ClassificationController">
+   <children>
+      <StackPane layoutY="2.0" prefHeight="40.0" prefWidth="200.0" styleClass="split-pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label-header" text="Classification" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+         </children>
+      </StackPane>
+      <Label layoutX="11.0" layoutY="49.0" prefHeight="21.0" prefWidth="445.0" text="Bienvenue dans le classificateur de documents K , le plus proche voisin" />
+      <Label layoutX="11.0" layoutY="90.0" prefHeight="21.0" prefWidth="290.0" text="Veuillez entrer un nombre pour la valeur K ?" />
+      <Label layoutX="11.0" layoutY="130.0" prefHeight="21.0" prefWidth="316.0" text="Entrée 1 pour FuzzyKNN ou 0 pour KNN standard:" />
+      <JFXTextField fx:id="path" editable="false" labelFloat="true" layoutX="11.0" layoutY="175.0" prefHeight="25.0" prefWidth="308.0" promptText="Test Document: " />
+      <JFXButton layoutX="364.0" layoutY="172.0" onAction="#select_dossier" prefHeight="32.0" prefWidth="180.0" text="Charge les documents">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="570.0" layoutY="172.0" onAction="#runKnn" prefHeight="32.0" prefWidth="180.0" text="RUN KNN">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <StackPane layoutY="210.0" prefHeight="40.0" prefWidth="200.0" styleClass="split-pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label-header" text="Resulta" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+         </children>
+      </StackPane>
+      <TableView fx:id="tab" layoutX="1.0" layoutY="413.0" prefHeight="172.0" prefWidth="758.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="413.0">
+        <columns>
+          <TableColumn fx:id="documnt" prefWidth="232.0" text="document test" />
+            <TableColumn fx:id="dossier" prefWidth="232.0" text="dossier" />
+          <TableColumn fx:id="percent" prefWidth="524.0" text="Predicted Class of test document" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox fx:id="box" layoutX="2.0" layoutY="254.0" prefHeight="155.0" prefWidth="757.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" />
+      <JFXComboBox fx:id="bk" layoutX="342.0" layoutY="83.0" prefHeight="25.0" prefWidth="165.0" />
+      <JFXComboBox fx:id="bkf" layoutX="342.0" layoutY="123.0" prefHeight="25.0" prefWidth="165.0" />
+   </children>
+</AnchorPane>

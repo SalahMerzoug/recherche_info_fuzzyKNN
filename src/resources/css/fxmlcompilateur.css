@@ -1,0 +1,106 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.mainFxmlClass {
+-fx-base: rgb(50, 50, 50);
+-fx-background: rgb(50, 50, 50);
+-fx-control-inner-background:  rgb(50, 50, 50);
+}
+.background {
+    -light-black: rgb(74, 75, 78);
+    -dark-highlight: rgb(87, 89, 92);
+    -dark-black: rgb(39, 40, 40);
+    -darkest-black: rgb(5, 5, 5);
+    -mid-gray: rgb(216, 222, 227);
+    -fx-background-color: -mid-gray;
+} 
+.text-area {
+    -fx-font-family: Consolas;
+    -fx-font-size: 15;
+    -fx-text-fill: #000000;
+    -fx-display-caret:true;
+}
+.text-are {
+    -fx-font-family: Consolas;
+    -fx-font-size: 13;
+    -fx-text-fill: #000000;
+    -fx-display-caret:true;
+}
+.text-area .content {
+    -fx-background-color:  #ffffff;
+}
+.tab {
+-fx-background-color: linear-gradient(to top, -fx-base, derive(-fx-base,30%));
+}
+.tool-bar {
+    -fx-font-size: 10pt;
+-fx-background-color: linear-gradient(to bottom, -fx-base, derive(-fx-base,30%));     
+    -fx-background-insets: 0, 1 1 1 1;
+    -fx-effect: dropshadow(two-pass-box,black,2,1,1,1);
+    
+}
+.segmented-button-bar .button {
+    -fx-background-color:
+        -darkest-black,
+        -dark-highlight,
+        linear-gradient(to bottom, -light-black 2%, -dark-black 98%);
+    -fx-background-insets: 0, 1 1 1 0, 2 1 1 1;
+    -fx-background-radius: 0;
+    -fx-padding: 0.4em 1.833333em 0.4em 1.833333em;
+}
+ 
+.segmented-button-bar .button.first {
+    -fx-background-insets: 0, 1, 2 1 1 1;
+    -fx-background-radius: 3 0 0 3, 2 0 0 2, 2 0 0 2;
+}
+ 
+.segmented-button-bar .button.last {
+    -fx-background-insets: 0, 1 1 1 0, 2 1 1 1;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 2 2 0;
+}
+ 
+.segmented-button-bar .button:pressed {
+    -fx-background-color:
+        -darkest-black,
+        rgb(55, 57, 58),
+        linear-gradient(to top, -light-black 2%, -dark-black 98%);
+}
+.menu-bar {
+-fx-background-color: linear-gradient(to bottom, -fx-base, derive(-fx-base,30%));
+}
+ 
+
+.button {
+-fx-background-color: transparent;
+}
+ 
+.button:hover {
+-fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+-fx-color: -fx-hover-base;
+}
+.split-pane:horizontal > * > .split-pane-divider {
+-fx-border-color: transparent -fx-base transparent -fx-base;
+-fx-background-color: transparent, derive(-fx-base,20%);
+-fx-background-insets: 0, 0 1 0 1;
+}
+ 
+.my-gridpane {
+-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%));
+}
+ 
+.separator-label {
+-fx-text-fill: orange;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #1b75bc;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #1b75bc;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: #75bc1b;
+    -fx-stroke-width: 3pt;
+}

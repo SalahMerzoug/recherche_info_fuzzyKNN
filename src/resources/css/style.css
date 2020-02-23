@@ -1,0 +1,83 @@
+.backgr
+{
+   -fx-background-image: url("backg.jpg") ;
+   -fx-background-repeat: no-repeat;
+    -fx-background-size:stretch;
+}
+.button
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+}
+.button:hover{
+-fx-background-color : #10165F;
+}
+.button:pressed
+{
+-fx-background-color : #1620A1;
+}
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-opacity: 0.8;
+     -fx-text-fill: #0C0C3D;
+}
+.pan-bar {
+    -fx-base: rgb(30, 30, 100);
+    -fx-font-size: 10pt;
+    -fx-background-color: linear-gradient(to bottom, -fx-base, derive(-fx-base,30%));     
+    -fx-background-insets: 0, 1 1 1 1;
+    -fx-effect: dropshadow(two-pass-box,black,1,1,1,1);
+    
+}
+.scroll-pane {
+    -fx-background-color: #02030A;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #10165F;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+.label-header {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #0A0A31;
+    -fx-opacity: 0.9;
+}
+.label-h {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #FFFFFF;
+    
+}
+.split-pane {
+    -fx-padding: 1 0 0 0;
+    
+}
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+   -fx-background-color: transparent;
+     
+
+}
